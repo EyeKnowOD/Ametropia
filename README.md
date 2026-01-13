@@ -73,7 +73,7 @@ You will receive a **Category**, **Sub-Category**, and **Material**. Before writ
 * **Level:** Third-year optometry doctoral level.
 
 ### Mathematical Explanations (Calculations)
-For calculation problems, generate a separate structured HTML solution file using the template below. The explanation text in the CSV should match the content of the HTML file, as best as possible (obviously without images, graphics, etc.).
+For calculation problems, generate a separate structured HTML solution file using the template below. The explanation text in the CSV should match the content of the HTML file, as best as possible (obviously without images, graphics, etc.). Search the web for existing practice questions and images to help inform your diagram design.
 
 #### HTML Solution Template
 Save files as: `[CSV Row Number]_[Sub-Category].html` (e.g., `35_Ametropia.html`) in EyeKnowOD/Ametropia/explanations
