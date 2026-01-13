@@ -1,0 +1,159 @@
+# Optics Formula Reference
+*Based on NBEO Part 1 Geometrical and Visual Optics Material*
+
+## 1. Basic Terms and Concepts
+**Snell's Law**
+$$n(\sin\theta) = n'(\sin\theta')$$
+
+---
+
+## 2. Refraction at Spherical Surfaces
+**Surface Power ($F$) & Focal Lengths ($f, f'$)**
+* **Secondary Focal Length:**
+    $$F = \frac{n'}{f'}$$
+* **Primary Focal Length:**
+    $$F = -\frac{n}{f}$$
+* **Surface Power (using Radius $r$):**
+    $$F = \frac{n' - n}{r}$$
+
+---
+
+## 3. The Vergence Relationship
+**Vergence Equation**
+$$L' = L + F$$
+
+* **Object Vergence ($L$):** $L = n / l$
+* **Image Vergence ($L'$):** $L' = n' / l'$
+* **Lateral Magnification ($M_L$):**
+    $$M_L = \frac{L}{L'}$$
+
+---
+
+## 4. Thin Lenses
+**Lens Power & Magnification**
+* **Nominal Power:**
+    $$F_T = F_1 + F_2$$
+* **Lateral Magnification (Lens in medium):**
+    $$M_L = \frac{L}{L'}$$
+* **Lateral Magnification (Lens in air):**
+    $$M_L = \frac{l'}{l}$$
+* **Newton's Relation:**
+    $$xx' = f^2$$
+
+---
+
+## 5. Optical Systems with Multiple Surfaces
+**System Magnification**
+* **Two Lenses:** $\text{Total } M_L = (M_{L1}) \times (M_{L2})$
+* **Two Surfaces:** $\text{Total } M_L = (M_{L1}) \times (M_{L2})$
+
+---
+
+## 6. Thick Lenses
+**Vertex & Equivalent Powers**
+* **Back Vertex Power ($F_v$):**
+    $$F_v = \frac{F_1}{1 - (t/n)F_1} + F_2$$
+* **Front Vertex Power ($F_n$):**
+    $$F_n = \frac{F_2}{1 - (t/n)F_2} + F_1$$
+* **Equivalent Power ($F_e$):**
+    $$F_e = F_1 + F_2 - \frac{t}{n} F_1 F_2$$
+
+**Principal Plane Locations**
+* **$A_1H$:**
+    $$A_1H = \frac{(t/n) F_2}{F_e}$$
+* **$A_2H'$:**
+    $$A_2H' = \frac{-(t/n) F_1}{F_e}$$
+
+---
+
+## 9. Cylindrical Lenses and the Correction of Astigmatism
+* **Oblique Meridian Power:**
+    $$F_{\theta} = (F_{cyl}) \sin^2\theta$$
+* **Spherical Equivalent:**
+    $$SE = \text{spherical correction} + \frac{\text{cylindrical correction}}{2}$$
+
+---
+
+## 10. Prisms
+**Prism Formulas**
+* **Minimum Deviation (Thin Prism):**
+    $$d_{min} = \alpha(n - 1)$$
+* **Prism Power (Displacement):**
+    $$P = 100 \left( \frac{x}{y} \right)$$
+* **Prentice's Rule:**
+    $$P = (c)(F)$$
+
+---
+
+## 11. Depth of Field
+**Resolution Limit**
+* **Radius of Airy’s Disk:**
+    $$\theta = \frac{1.22 \lambda}{d}$$
+
+---
+
+## 12. Magnification and Low Vision Devices
+** magnifiers & Telescopes**
+* **Equivalent Viewing Power (Add/Cap):**
+    $$EVP = (M) (\text{add power})$$
+* **Effective Magnification (25cm ref):**
+    $$M_{25} = \frac{F}{4}$$
+* **Telescope Angular Magnification ($M_{ang}$):**
+    $$M_{ang} = -\frac{F_2}{F_1}$$
+    $$M_{ang} = \frac{1}{1 - dF_1}$$
+    $$M_{ang} = \frac{\text{entrance pupil diameter}}{\text{exit pupil diameter}}$$
+
+---
+
+## 13. Retinal Image Size
+**Spectacle Magnification**
+* **General Formula:**
+    $$M_{spect} = (M_{power}) \times (M_{shape})$$
+* **Expanded Formula:**
+    $$M_{spect} = \left[ \frac{1}{1 - dF_v} \right] \left[ \frac{1}{1 - (t/n)F_1} \right]$$
+
+---
+
+## 14. Reflection
+**Mirrors**
+* **Power (using Radius $r$):**
+    $$F = -\frac{2}{r}$$
+* **Power (using Focal Length $f'$):**
+    $$F = -\frac{1}{f'}$$
+* **Radius Relationship:**
+    $$r = 2f'$$
+* **Image Location:**
+    $$L' = -\frac{1}{l'}$$
+* **Magnification:**
+    $$M_L = -\frac{l'}{l}$$
+
+**Reflectance**
+* **Fraction Reflected ($R$):**
+    $$R = \left[ \frac{n' - n}{n' + n} \right]^2$$
+* **Ideal AR Coating Index:**
+    $$n_c = \sqrt{n_L}$$
+
+---
+
+## 15. Aberrations
+**Spherical Aberration**
+* **Bending Factor:**
+    $$\sigma = \frac{r_2 + r_1}{r_2 - r_1}$$
+
+**Oblique Astigmatism**
+* **Face-Form (Axis 090):**
+    $$F_{@090} = F \left( 1 + \frac{\sin^2\theta}{2n} \right)$$
+    * **Induced Cylinder (Axis 090):** $F(\tan^2\theta)$
+* **Pantoscopic Tilt (Axis 180):**
+    $$F_{@180} = F \left( 1 + \frac{\sin^2\theta}{2n} \right)$$
+    * **Induced Cylinder (Axis 180):** $F(\tan^2\theta)$
+
+**Chromatic Aberration**
+* **Dispersive Power:**
+    $$\omega = \frac{n_f - n_c}{n_d - 1}$$
+* **Constringence (Abbe Value):**
+    $$v = \frac{1}{\omega} = \frac{n_d - 1}{n_f - n_c}$$
+* **Lateral Chromatic Aberration:**
+    $$\text{Lateral } CA = P_f - P_c = \frac{P_d}{v}$$
+* **Longitudinal Chromatic Aberration:**
+    $$\text{Longitudinal } CA = F_f - F_c = \frac{F_d}{v}$$
