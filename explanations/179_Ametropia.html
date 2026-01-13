@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spherical Aberration and Lens Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            padding: 48px 24px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .problem-box {
+            border-left: 3px solid #3b9fe7;
+            padding: 16px 20px;
+            background: #f8fafc;
+            margin-bottom: 32px;
+        }
+
+        .problem-label {
+            font-weight: 600;
+            color: #3b9fe7;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .problem-text {
+            font-size: 15px;
+            color: #333;
+        }
+
+        .diagram-section {
+            margin-bottom: 32px;
+        }
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .key-concept {
+            background: #f8fafc;
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin: 16px 0 24px 0;
+            border-left: 3px solid #3b9fe7;
+        }
+
+        .key-concept-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #3b9fe7;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .key-concept-item {
+            font-size: 14px;
+            color: #444;
+            margin: 8px 0;
+        }
+
+        .comparison-box {
+            background: #fafafa;
+            border-radius: 4px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .comparison-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .final-answer {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 20px;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-left: 3px solid #3b9fe7;
+        }
+
+        .distractor-section {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+        }
+
+        .distractor-item {
+            margin-bottom: 16px;
+        }
+
+        .distractor-label {
+            font-weight: 600;
+            font-size: 13px;
+            color: #e74c3c;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="problem-box">
+            <div class="problem-label">Problem</div>
+            <div class="problem-text">A <strong>+6.00 D equiconvex crown glass lens</strong> (n = 1.523) is used to focus parallel light rays from a <strong>distant source</strong> onto a screen. To minimize spherical aberration and achieve the sharpest image, which lens orientation and optical principle should be applied?</div>
+        </div>
+
+        <div class="key-concept">
+            <div class="key-concept-title">FUNDAMENTAL PRINCIPLE</div>
+            <div class="key-concept-item">Spherical aberration is minimized when refraction is distributed <strong>equally between lens surfaces</strong></div>
+            <div class="key-concept-item">This is the basis of <strong>"best form" lens design</strong></div>
+        </div>
+
+        <div class="diagram-section">
+            <svg width="600" height="500" viewBox="0 0 600 500">
+                <!-- Title -->
+                <text x="300" y="20" text-anchor="middle" font-family="Work Sans" font-size="14" font-weight="600" fill="#1a1a1a">OPTIMAL ORIENTATION (Less Spherical Aberration)</text>
+
+                <!-- Optical axis -->
+                <line x1="20" y1="120" x2="580" y2="120" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+
+                <!-- Equiconvex lens - optimal orientation -->
+                <ellipse cx="200" cy="120" rx="8" ry="60" fill="none" stroke="#3b9fe7" stroke-width="2.5"/>
+                <ellipse cx="240" cy="120" rx="8" ry="60" fill="none" stroke="#3b9fe7" stroke-width="2.5"/>
+                <line x1="200" y1="60" x2="240" y2="60" stroke="#3b9fe7" stroke-width="0.5"/>
+                <line x1="200" y1="180" x2="240" y2="180" stroke="#3b9fe7" stroke-width="0.5"/>
+
+                <!-- Parallel rays from left (distant source) -->
+                <line x1="20" y1="90" x2="193" y2="90" stroke="#666" stroke-width="1.5"/>
+                <polygon points="193,90 185,87 185,93" fill="#666"/>
+
+                <line x1="20" y1="120" x2="196" y2="120" stroke="#666" stroke-width="1.5"/>
+                <polygon points="196,120 188,117 188,123" fill="#666"/>
+
+                <line x1="20" y1="150" x2="193" y2="150" stroke="#666" stroke-width="1.5"/>
+                <polygon points="193,150 185,147 185,153" fill="#666"/>
+
+                <!-- Refracted rays converging -->
+                <line x1="207" y1="88" x2="420" y2="120" stroke="#3b9fe7" stroke-width="1.5"/>
+                <line x1="204" y1="120" x2="420" y2="120" stroke="#3b9fe7" stroke-width="1.5"/>
+                <line x1="207" y1="152" x2="420" y2="120" stroke="#3b9fe7" stroke-width="1.5"/>
+
+                <!-- Focus point -->
+                <circle cx="420" cy="120" r="3" fill="#3b9fe7"/>
+                <text x="440" y="125" font-family="Work Sans" font-size="12" fill="#3b9fe7">Sharp focus</text>
+
+                <!-- Labels -->
+                <text x="100" y="50" font-family="Work Sans" font-size="12" fill="#666">Parallel rays</text>
+                <text x="100" y="64" font-family="Work Sans" font-size="11" fill="#888">(from ∞)</text>
+
+                <text x="220" y="40" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#3b9fe7" font-weight="600">Curved surface</text>
+                <text x="220" y="52" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#3b9fe7" font-weight="600">faces source</text>
+
+                <text x="280" y="100" font-family="Work Sans" font-size="11" fill="#3b9fe7">Refraction distributed</text>
+                <text x="280" y="112" font-family="Work Sans" font-size="11" fill="#3b9fe7">between both surfaces</text>
+
+                <!-- Divider line -->
+                <line x1="0" y1="250" x2="600" y2="250" stroke="#ccc" stroke-width="1"/>
+
+                <!-- Title for poor orientation -->
+                <text x="300" y="280" text-anchor="middle" font-family="Work Sans" font-size="14" font-weight="600" fill="#e74c3c">POOR ORIENTATION (More Spherical Aberration)</text>
+
+                <!-- Optical axis -->
+                <line x1="20" y1="380" x2="580" y2="380" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+
+                <!-- Equiconvex lens - poor orientation (flipped) -->
+                <ellipse cx="200" cy="380" rx="8" ry="60" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+                <ellipse cx="240" cy="380" rx="8" ry="60" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+                <line x1="200" y1="320" x2="240" y2="320" stroke="#e74c3c" stroke-width="0.5"/>
+                <line x1="200" y1="440" x2="240" y2="440" stroke="#e74c3c" stroke-width="0.5"/>
+
+                <!-- Parallel rays from left -->
+                <line x1="20" y1="350" x2="193" y2="350" stroke="#666" stroke-width="1.5"/>
+                <polygon points="193,350 185,347 185,353" fill="#666"/>
+
+                <line x1="20" y1="380" x2="196" y2="380" stroke="#666" stroke-width="1.5"/>
+                <polygon points="196,380 188,377 188,383" fill="#666"/>
+
+                <line x1="20" y1="410" x2="193" y2="410" stroke="#666" stroke-width="1.5"/>
+                <polygon points="193,410 185,407 185,413" fill="#666"/>
+
+                <!-- Refracted rays with aberration - marginal rays focus differently -->
+                <line x1="207" y1="348" x2="390" y2="380" stroke="#e74c3c" stroke-width="1.5"/>
+                <line x1="204" y1="380" x2="440" y2="380" stroke="#e74c3c" stroke-width="1.5"/>
+                <line x1="207" y1="412" x2="390" y2="380" stroke="#e74c3c" stroke-width="1.5"/>
+
+                <!-- Multiple focus points showing aberration -->
+                <circle cx="390" cy="380" r="3" fill="#e74c3c"/>
+                <circle cx="440" cy="380" r="3" fill="#e74c3c"/>
+                <text x="460" y="385" font-family="Work Sans" font-size="12" fill="#e74c3c">Blur (multiple foci)</text>
+
+                <!-- Labels -->
+                <text x="100" y="310" font-family="Work Sans" font-size="12" fill="#666">Parallel rays</text>
+                <text x="100" y="324" font-family="Work Sans" font-size="11" fill="#888">(from ∞)</text>
+
+                <text x="220" y="300" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#e74c3c" font-weight="600">Same lens</text>
+                <text x="220" y="312" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#e74c3c" font-weight="600">flipped</text>
+
+                <text x="280" y="360" font-family="Work Sans" font-size="11" fill="#e74c3c">Unequal refraction</text>
+                <text x="280" y="372" font-family="Work Sans" font-size="11" fill="#e74c3c">creates aberration</text>
+            </svg>
+        </div>
+
+        <div class="section-title">Understanding the Concept</div>
+        <p>Spherical aberration occurs when light rays passing through different zones of a spherical lens focus at different points along the optical axis. Marginal rays (passing through the peripheral zones) and paraxial rays (passing near the optical center) fail to converge at a single focal point, creating blur.</p>
+
+        <div class="comparison-box">
+            <div class="comparison-title">Why Lens Orientation Matters</div>
+            <p>Even though an equiconvex lens has two identical curved surfaces, the orientation affects how incoming rays encounter each surface and how refraction is distributed:</p>
+            <p><strong>Optimal Configuration:</strong> When the curved surface faces the distant source, parallel rays first encounter the curved surface and begin converging. The second surface then continues this convergence, with both surfaces sharing the refractive work relatively equally.</p>
+            <p><strong>Poor Configuration:</strong> When the lens is flipped, the parallel rays encounter less initial refraction, forcing the second surface to perform excessive bending. This unequal distribution causes marginal rays to be over-refracted, focusing at different points than paraxial rays.</p>
+        </div>
+
+        <div class="section-title">Clinical Application</div>
+        <p>This best-form principle is fundamental to spectacle lens design. Meniscus spectacle lenses are specifically shaped with proper base curves to minimize spherical aberration and other monochromatic aberrations. The goal is always to balance refraction between the front and back surfaces for the specific viewing distance and prescription power.</p>
+
+        <p>Understanding this principle helps explain why plus lenses are typically made steeper on the front surface, while high-minus lenses often use specific base curve designs to optimize optical performance and minimize peripheral blur that could affect patient comfort and visual quality.</p>
+
+        <div class="final-answer">
+            Answer: <span style="color: #3b9fe7;">Orient the more curved surface toward the distant source to distribute refraction equally between surfaces</span>
+        </div>
+
+        <div class="distractor-section">
+            <div class="section-title">Why Other Answers Are Incorrect</div>
+
+            <div class="distractor-item">
+                <div class="distractor-label">✗ "Orient with either surface facing the source since lens shape is symmetric"</div>
+                <p>While the equiconvex lens has symmetric geometry, this ignores the asymmetric nature of the optical setup (parallel rays entering from one side). Even symmetric lenses have preferred orientations based on object and image conjugate distances. The symmetry of the lens shape does not make orientation irrelevant for aberration control.</p>
+            </div>
+
+            <div class="distractor-item">
+                <div class="distractor-label">✗ "Orient the flatter surface toward the distant source to minimize peripheral ray deviation"</div>
+                <p>This is backwards. An equiconvex lens has no flat surface—both are equally curved. If this were a plano-convex lens, orienting the flat surface toward the source would actually maximize spherical aberration by forcing all refraction to occur at a single surface rather than distributing it. This violates the fundamental principle of equal refraction distribution.</p>
+            </div>
+
+            <div class="distractor-item">
+                <div class="distractor-label">✗ "Use the lens at minimum aperture regardless of orientation to reduce aberration"</div>
+                <p>While reducing aperture size (stopping down the lens) does reduce spherical aberration by blocking marginal rays, this answer fails to address the question about orientation. Additionally, this is not an optimal solution because it sacrifices light-gathering ability and can introduce diffraction effects. Proper lens orientation provides aberration reduction without these compromises.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
