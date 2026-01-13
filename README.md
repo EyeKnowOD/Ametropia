@@ -5,7 +5,7 @@
 **Context:** NBEO Part 1 Exam (Geometrical and Visual Optics)  
 **Goal:** Create high-quality multiple-choice questions that test doctoral-level optics knowledge.
 
-You will receive a **Category**, **Sub-Category**, and **Material**. Before writing questions, use the formula reference and topic guidance below to ensure accuracy and appropriate difficulty.
+You will receive a **Category**, **Sub-Category**, and **Material**. Before writing questions, use the Formula Cheat Sheet and topic guidance below to ensure accuracy and appropriate difficulty. Also review the existing questions within EyeKnowOD/Ametropia/csv and existing explanations to ensure you are following the correct format and not repeating questions.
 
 ---
 
@@ -68,14 +68,14 @@ You will receive a **Category**, **Sub-Category**, and **Material**. Before writ
 ### General Explanations (Conceptual)
 * **Format:** Narrative prose with logical flow (NO numbered lists or bullet points).
 * **Content:** Thoroughly explain the correct answer and address why distractors are incorrect using educational context.
-* **Length/Tone:** 150-200 words; concise, complete, active voice.
+* **Length/Tone:** ~100-150 words; concise, complete, active voice.
 * **Level:** Third-year optometry doctoral level.
 
 ### Mathematical Explanations (Calculations)
-For calculation problems, generate a separate structured HTML solution file using the template below. The explanation text in the CSV should simply refer to the attached HTML file.
+For calculation problems, generate a separate structured HTML solution file using the template below. The explanation text in the CSV should match the content of the HTML file, as best as possible (obviously without images, graphics, etc.).
 
 #### HTML Solution Template
-Save files as: `[Question Number]_[Topic].html` (e.g., `35_Prentice_Rule.html`)
+Save files as: `[CSV Row Number]_[Sub-Category].html` (e.g., `35_Ametropia.html`) in EyeKnowOD/Ametropia/explanations
 
 ```html
 <!DOCTYPE html>
