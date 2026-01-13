@@ -61,6 +61,7 @@ You will receive a **Category**, **Sub-Category**, and **Material**. Before writ
 * Connect theory to clinical implications.
 * Avoid testing trivial details.
 
+**Saving Procedure: Append to csv/NBEO Part 1 Question Database - Ametropia - Ametropia.csv **
 ---
 
 ## 3. Explanation Guidelines
