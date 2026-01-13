@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spherical Aberration in Retinoscopy - Clinical Walkthrough</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            padding: 48px 24px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .problem-box {
+            border-left: 3px solid #3b9fe7;
+            padding: 16px 20px;
+            background: #f8fafc;
+            margin-bottom: 32px;
+        }
+
+        .problem-label {
+            font-weight: 600;
+            color: #3b9fe7;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .problem-text {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #1a1a1a;
+            margin: 32px 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .subsection-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #3b9fe7;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .diagram-section {
+            margin: 24px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .key-concept {
+            background: #fff5e6;
+            border-left: 3px solid #ff9800;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .key-concept-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #ff9800;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .key-concept-text {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .clinical-pearl {
+            background: #e8f5e9;
+            border-left: 3px solid #4caf50;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .clinical-pearl-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #4caf50;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .clinical-pearl-text {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .answer-box {
+            background: #f8fafc;
+            border: 2px solid #3b9fe7;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 6px;
+        }
+
+        .answer-label {
+            font-weight: 600;
+            color: #3b9fe7;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .answer-text {
+            font-size: 15px;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .distractor-section {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .distractor-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #d32f2f;
+            margin-bottom: 6px;
+        }
+
+        .distractor-text {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .formula-box {
+            background: #f0f7ff;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin: 12px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th {
+            background: #3b9fe7;
+            color: white;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 10px;
+            font-size: 13px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="problem-box">
+            <div class="problem-label">CLINICAL SCENARIO</div>
+            <div class="problem-text">
+                A hyperopic patient is corrected with <strong>+8.00 D spectacle lenses</strong>. When examining the patient's retinal reflex with retinoscopy through <strong>dilated pupils</strong>, the examiner observes that the <strong>central reflex moves in the expected direction</strong> but the <strong>peripheral reflex appears to move more rapidly</strong>. This observation is most consistent with which optical phenomenon?
+            </div>
+        </div>
+
+        <div class="section-title">Understanding Spherical Aberration in Plus Lenses</div>
+
+        <p>Spherical aberration is a monochromatic aberration that occurs when rays passing through different zones of a spherical lens or optical system fail to converge at a single focal point. In high plus lenses, this manifests as a systematic difference in refraction between central (paraxial) and peripheral (marginal) rays.</p>
+
+        <div class="diagram-section">
+            <svg width="600" height="280" viewBox="0 0 600 280">
+                <!-- Title -->
+                <text x="300" y="20" text-anchor="middle" font-family="Work Sans" font-size="14" font-weight="600" fill="#1a1a1a">Positive Spherical Aberration in +8.00 D Lens</text>
+
+                <!-- Optical axis -->
+                <line x1="20" y1="140" x2="580" y2="140" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+
+                <!-- Plus lens (biconvex shape) -->
+                <path d="M 200 60 Q 220 140 200 220" fill="rgba(59, 159, 231, 0.1)" stroke="#3b9fe7" stroke-width="3"/>
+                <path d="M 200 60 Q 180 140 200 220" fill="rgba(59, 159, 231, 0.1)" stroke="#3b9fe7" stroke-width="3"/>
+
+                <!-- Lens label -->
+                <text x="200" y="45" text-anchor="middle" font-family="Work Sans" font-size="12" font-weight="600" fill="#3b9fe7">+8.00 D Lens</text>
+
+                <!-- Parallel incident rays from left -->
+                <!-- Paraxial ray (central) -->
+                <line x1="20" y1="140" x2="200" y2="140" stroke="#4caf50" stroke-width="2"/>
+                <line x1="200" y1="140" x2="450" y2="140" stroke="#4caf50" stroke-width="2"/>
+                <circle cx="450" cy="140" r="4" fill="#4caf50"/>
+
+                <!-- Marginal rays (peripheral) -->
+                <line x1="20" y1="80" x2="200" y2="80" stroke="#ff5722" stroke-width="2"/>
+                <line x1="200" y1="80" x2="380" y2="140" stroke="#ff5722" stroke-width="2"/>
+                <circle cx="380" cy="140" r="4" fill="#ff5722"/>
+
+                <line x1="20" y1="200" x2="200" y2="200" stroke="#ff5722" stroke-width="2"/>
+                <line x1="200" y1="200" x2="380" y2="140" stroke="#ff5722" stroke-width="2"/>
+
+                <!-- Focal point labels -->
+                <text x="450" y="165" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#4caf50" font-weight="500">Paraxial Focus</text>
+                <text x="450" y="178" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#4caf50">(f' = 12.5 cm)</text>
+
+                <text x="380" y="120" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#ff5722" font-weight="500">Marginal Focus</text>
+                <text x="380" y="105" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#ff5722">(shorter focal length)</text>
+
+                <!-- Distance bracket for paraxial -->
+                <line x1="200" y1="250" x2="450" y2="250" stroke="#4caf50" stroke-width="1"/>
+                <line x1="200" y1="245" x2="200" y2="255" stroke="#4caf50" stroke-width="1"/>
+                <line x1="450" y1="245" x2="450" y2="255" stroke="#4caf50" stroke-width="1"/>
+
+                <!-- Distance bracket for marginal -->
+                <line x1="200" y1="265" x2="380" y2="265" stroke="#ff5722" stroke-width="1"/>
+                <line x1="200" y1="260" x2="200" y2="270" stroke="#ff5722" stroke-width="1"/>
+                <line x1="380" y1="260" x2="380" y2="270" stroke="#ff5722" stroke-width="1"/>
+
+                <!-- Blur circle -->
+                <circle cx="450" cy="140" r="25" fill="none" stroke="#ff9800" stroke-width="2" stroke-dasharray="3,3"/>
+                <text x="500" y="145" font-family="Work Sans" font-size="10" fill="#ff9800">Blur Circle</text>
+            </svg>
+        </div>
+
+        <div class="key-concept">
+            <div class="key-concept-title">KEY CONCEPT</div>
+            <div class="key-concept-text">
+                In positive spherical aberration, marginal rays are refracted MORE strongly than paraxial rays, causing them to focus CLOSER to the lens. This creates longitudinal spherical aberration (LSA), where different zones of the lens have different effective focal lengths.
+            </div>
+        </div>
+
+        <div class="section-title">Clinical Manifestation During Retinoscopy</div>
+
+        <p>During retinoscopy through a high plus spectacle lens with dilated pupils, the examiner observes light reflexes from both the central (paraxial) and peripheral (marginal) portions of the pupil simultaneously. The differential refraction caused by spherical aberration creates distinct movement characteristics for these two zones.</p>
+
+        <div class="subsection-title">Why the Peripheral Reflex Moves Faster</div>
+
+        <p>The marginal rays passing through the lens periphery are "over-plushed" by spherical aberration. This effectively means the peripheral zones act as if they have a higher plus power than the central zones. In retinoscopy terms:</p>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Lens Zone</th>
+                <th>Effective Power</th>
+                <th>Neutralization Distance</th>
+                <th>Reflex Characteristics</th>
+            </tr>
+            <tr>
+                <td><strong>Central (Paraxial)</strong></td>
+                <td>+8.00 D (nominal)</td>
+                <td>Standard working distance</td>
+                <td>Normal movement speed</td>
+            </tr>
+            <tr>
+                <td><strong>Peripheral (Marginal)</strong></td>
+                <td>>+8.00 D (over-plushed)</td>
+                <td>Closer to patient</td>
+                <td>Faster movement</td>
+            </tr>
+        </table>
+
+        <p>Because the peripheral zones have higher effective plus power, they neutralize at a closer working distance. When the examiner is positioned at the standard working distance for the nominal +8.00 D correction, the peripheral reflex appears to move MORE rapidly than the central reflex—similar to how a higher plus error produces faster "with" motion.</p>
+
+        <div class="clinical-pearl">
+            <div class="clinical-pearl-title">CLINICAL PEARL</div>
+            <div class="clinical-pearl-text">
+                This "split reflex" or differential motion between central and peripheral zones is sometimes called a "scissors reflex" when extreme. It's most noticeable with: (1) High plus or high minus powers, (2) Dilated pupils allowing visualization of peripheral zones, (3) Spherical lens designs (vs. aspheric lenses that correct for this aberration).
+            </div>
+        </div>
+
+        <div class="section-title">The Correct Answer</div>
+
+        <div class="answer-box">
+            <div class="answer-label">CORRECT ANSWER:</div>
+            <div class="answer-text">Positive spherical aberration in the spectacle lens</div>
+        </div>
+
+        <p>High plus spectacle lenses inherently produce positive spherical aberration. The observation of faster peripheral reflex movement directly indicates that the marginal rays are being over-refracted compared to paraxial rays—the defining characteristic of positive spherical aberration in plus lenses.</p>
+
+        <div class="section-title">Why Other Answers Are Incorrect</div>
+
+        <div class="distractor-section">
+            <div class="distractor-title">❌ Marginal astigmatism in the patient's crystalline lens</div>
+            <div class="distractor-text">
+                While marginal astigmatism (also called oblique astigmatism) can occur in the crystalline lens, it would produce streak reflexes or oval reflexes in different meridians rather than a uniform increase in reflex speed across the entire periphery. The question describes symmetric rapid movement in the peripheral zone, not meridional differences.
+            </div>
+        </div>
+
+        <div class="distractor-section">
+            <div class="distractor-title">❌ Negative spherical aberration in the patient's cornea</div>
+            <div class="distractor-text">
+                Normal corneas typically exhibit positive spherical aberration (marginal rays focus shorter), not negative. Even if the cornea had negative spherical aberration, this would be an intrinsic property affecting the total refractive system but would not specifically explain why the reflex through the spectacle lens shows zone-dependent movement differences. The observation is attributable to the correcting lens, not the cornea.
+            </div>
+        </div>
+
+        <div class="distractor-section">
+            <div class="distractor-title">❌ Irregular astigmatism from corneal scarring</div>
+            <div class="distractor-text">
+                Irregular astigmatism produces distorted, fragmented, or variable reflexes that lack symmetry and predictable patterns. The question describes a systematic observation where the peripheral reflex uniformly moves faster than the central reflex—this is a regular, predictable pattern characteristic of spherical aberration, not the chaotic patterns of irregular astigmatism.
+            </div>
+        </div>
+
+        <div class="section-title">Modern Clinical Relevance</div>
+
+        <p>Understanding spherical aberration in high-power lenses has important implications for lens design and patient care:</p>
+
+        <p><strong>Aspheric Lens Designs:</strong> Modern ophthalmic lenses for high prescriptions often use aspheric surfaces that gradually flatten toward the periphery. This design distributes refractive power more evenly across the lens aperture, minimizing spherical aberration and providing sharper vision, especially with larger pupils.</p>
+
+        <p><strong>Contact Lens Designs:</strong> Spherical aberration control in contact lenses can actually be beneficial. Some designs incorporate controlled amounts of spherical aberration to increase depth of focus for presbyopic patients or to slow myopia progression in children by creating peripheral defocus.</p>
+
+        <p><strong>Wavefront-Guided Corrections:</strong> Advanced diagnostic systems measure higher-order aberrations including spherical aberration, allowing for customized corrections in premium spectacle lenses, contact lenses, and refractive surgery.</p>
+
+        <div class="clinical-pearl">
+            <div class="clinical-pearl-title">TAKE-HOME MESSAGE</div>
+            <div class="clinical-pearl-text">
+                When performing retinoscopy through high-power spectacle lenses with dilated pupils, differential movement between central and peripheral reflexes indicates spherical aberration in the correcting lens. Recognizing this optical artifact prevents misdiagnosis of corneal irregularities and helps guide appropriate lens design recommendations.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
