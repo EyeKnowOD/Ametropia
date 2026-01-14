@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coma Aberration</title>
+    <title>Coma - Lateral Magnification Variation</title>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -130,32 +130,12 @@
             margin-bottom: 6px;
         }
 
-        .characteristic-list {
-            background: #fafafa;
-            padding: 16px 20px;
+        .mechanism-box {
+            background: #fff9e6;
+            border: 1px solid #ffd700;
             border-radius: 4px;
+            padding: 16px;
             margin: 16px 0;
-        }
-
-        .characteristic-list ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .characteristic-list li {
-            font-size: 14px;
-            color: #444;
-            margin: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .characteristic-list li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #3b9fe7;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -163,151 +143,166 @@
     <div class="container">
         <div class="problem-box">
             <div class="problem-label">Problem</div>
-            <div class="problem-text">A patient reports seeing <strong>asymmetric, comet-shaped streaks</strong> radiating from point light sources when viewing objects in their <strong>peripheral visual field</strong> through their new spectacle lenses. This is most characteristic of which aberration?</div>
+            <div class="problem-text">When viewing an <strong>off-axis point source</strong> through a spectacle lens, <strong>asymmetric blur with progressive directional smearing</strong> occurs. What is the primary optical cause of this phenomenon?</div>
         </div>
 
         <div class="key-concept">
-            <div class="key-concept-title">KEY DIAGNOSTIC FEATURES</div>
-            <div class="key-concept-item"><strong>Asymmetric</strong> blur pattern (not circular)</div>
-            <div class="key-concept-item"><strong>Comet-shaped</strong> appearance with directional tail</div>
-            <div class="key-concept-item">Occurs in <strong>peripheral vision</strong> (off-axis viewing)</div>
-            <div class="key-concept-item">Affects <strong>point sources</strong> of light</div>
+            <div class="key-concept-title">CORRECT ANSWER</div>
+            <div class="key-concept-item">Oblique rays through different lens zones experience <strong>varying magnification</strong> leading to <strong>differential lateral image displacement</strong></div>
         </div>
 
         <div class="diagram-section">
-            <svg width="650" height="520" viewBox="0 0 650 520">
-                <!-- Top section: On-axis viewing (no coma) -->
-                <text x="325" y="25" text-anchor="middle" font-family="Work Sans" font-size="14" font-weight="600" fill="#1a1a1a">ON-AXIS VIEWING (Through Optical Center)</text>
+            <svg width="650" height="600" viewBox="0 0 650 600">
+                <!-- Title -->
+                <text x="325" y="25" text-anchor="middle" font-family="Work Sans" font-size="14" font-weight="600" fill="#1a1a1a">COMA: Varying Magnification Creates Lateral Displacement</text>
 
                 <!-- Optical axis -->
-                <line x1="50" y1="100" x2="600" y2="100" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+                <line x1="50" y1="150" x2="600" y2="150" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
 
                 <!-- Lens -->
-                <ellipse cx="250" cy="100" rx="6" ry="50" fill="none" stroke="#3b9fe7" stroke-width="2"/>
+                <ellipse cx="250" cy="150" rx="6" ry="65" fill="none" stroke="#3b9fe7" stroke-width="2.5"/>
 
-                <!-- Point source on left -->
+                <!-- Off-axis point source -->
                 <circle cx="100" cy="100" r="4" fill="#ffd700"/>
                 <line x1="96" y1="96" x2="104" y2="104" stroke="#ffd700" stroke-width="2"/>
                 <line x1="96" y1="104" x2="104" y2="96" stroke="#ffd700" stroke-width="2"/>
 
-                <!-- Rays from point source through lens (symmetric) -->
-                <line x1="100" y1="100" x2="244" y2="75" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
-                <line x1="100" y1="100" x2="244" y2="100" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
-                <line x1="100" y1="100" x2="244" y2="125" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+                <!-- Ray through UPPER zone (greater lateral magnification) -->
+                <line x1="100" y1="100" x2="244" y2="95" stroke="#e74c3c" stroke-width="2" opacity="0.8"/>
+                <line x1="256" y1="95" x2="480" y2="125" stroke="#e74c3c" stroke-width="2" opacity="0.8"/>
+                <circle cx="480" cy="125" r="3" fill="#e74c3c"/>
 
-                <!-- Converging rays after lens -->
-                <line x1="256" y1="75" x2="450" y2="100" stroke="#3b9fe7" stroke-width="1.5"/>
-                <line x1="256" y1="100" x2="450" y2="100" stroke="#3b9fe7" stroke-width="1.5"/>
-                <line x1="256" y1="125" x2="450" y2="100" stroke="#3b9fe7" stroke-width="1.5"/>
+                <!-- Ray through MIDDLE zone (moderate lateral magnification) -->
+                <line x1="100" y1="100" x2="244" y2="120" stroke="#ff8c00" stroke-width="2" opacity="0.8"/>
+                <line x1="256" y1="120" x2="490" y2="135" stroke="#ff8c00" stroke-width="2" opacity="0.8"/>
+                <circle cx="490" cy="135" r="3" fill="#ff8c00"/>
 
-                <!-- Sharp point image -->
-                <circle cx="450" cy="100" r="3" fill="#3b9fe7"/>
+                <!-- Ray through LOWER zone (less lateral magnification) -->
+                <line x1="100" y1="100" x2="244" y2="150" stroke="#3b9fe7" stroke-width="2" opacity="0.8"/>
+                <line x1="256" y1="150" x2="500" y2="145" stroke="#3b9fe7" stroke-width="2" opacity="0.8"/>
+                <circle cx="500" cy="145" r="3" fill="#3b9fe7"/>
 
-                <!-- Labels positioned away from diagram -->
-                <text x="100" y="65" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#888">Point source</text>
-                <text x="450" y="75" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#3b9fe7" font-weight="600">Sharp image</text>
-                <text x="450" y="125" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#3b9fe7">(no aberration)</text>
+                <!-- Blur pattern showing progressive displacement -->
+                <ellipse cx="478" cy="125" rx="6" ry="3" fill="#e74c3c" opacity="0.3"/>
+                <ellipse cx="488" cy="133" rx="9" ry="4" fill="#ff8c00" opacity="0.3"/>
+                <ellipse cx="498" cy="143" rx="8" ry="3" fill="#3b9fe7" opacity="0.3"/>
+
+                <!-- Progressive smear indicator -->
+                <path d="M 475 125 Q 488 133 500 143" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+
+                <!-- Zone labels - positioned clear of diagram -->
+                <text x="170" y="70" font-family="Work Sans" font-size="10" fill="#e74c3c" font-weight="600">Upper zone ray</text>
+                <text x="170" y="82" font-family="Work Sans" font-size="9" fill="#e74c3c">(high magnification)</text>
+
+                <text x="165" y="115" font-family="Work Sans" font-size="10" fill="#ff8c00" font-weight="600">Middle zone ray</text>
+
+                <text x="165" y="165" font-family="Work Sans" font-size="10" fill="#3b9fe7" font-weight="600">Lower zone ray</text>
+                <text x="165" y="177" font-family="Work Sans" font-size="9" fill="#3b9fe7">(low magnification)</text>
+
+                <!-- Image plane -->
+                <line x1="460" y1="100" x2="520" y2="160" stroke="#888" stroke-width="1" stroke-dasharray="2,2"/>
+
+                <!-- Labels positioned away from rays -->
+                <text x="100" y="75" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#888">Off-axis</text>
+                <text x="100" y="85" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#888">point</text>
+
+                <text x="535" y="135" font-family="Work Sans" font-size="10" fill="#666" font-weight="600">Progressive</text>
+                <text x="535" y="147" font-family="Work Sans" font-size="10" fill="#666" font-weight="600">displacement</text>
 
                 <!-- Divider -->
-                <line x1="0" y1="200" x2="650" y2="200" stroke="#ddd" stroke-width="1.5"/>
+                <line x1="0" y1="250" x2="650" y2="250" stroke="#ddd" stroke-width="1.5"/>
 
-                <!-- Bottom section: Off-axis viewing (coma present) -->
-                <text x="325" y="230" text-anchor="middle" font-family="Work Sans" font-size="14" font-weight="600" fill="#e74c3c">OFF-AXIS VIEWING (Through Peripheral Lens)</text>
+                <!-- Comparison title -->
+                <text x="325" y="280" text-anchor="middle" font-family="Work Sans" font-size="13" font-weight="600" fill="#666">Comparison: Spherical Aberration (Axial, Not Lateral)</text>
 
-                <!-- Optical axis -->
-                <line x1="50" y1="330" x2="600" y2="330" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+                <!-- Optical axis for comparison -->
+                <line x1="50" y1="380" x2="600" y2="380" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
 
                 <!-- Lens -->
-                <ellipse cx="250" cy="330" rx="6" ry="50" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                <ellipse cx="250" cy="380" rx="6" ry="65" fill="none" stroke="#888" stroke-width="2"/>
 
-                <!-- Point source ABOVE axis (oblique incidence) -->
-                <circle cx="100" cy="280" r="4" fill="#ffd700"/>
-                <line x1="96" y1="276" x2="104" y2="284" stroke="#ffd700" stroke-width="2"/>
-                <line x1="96" y1="284" x2="104" y2="276" stroke="#ffd700" stroke-width="2"/>
+                <!-- ON-AXIS point source -->
+                <circle cx="100" cy="380" r="4" fill="#ffd700"/>
+                <line x1="96" y1="376" x2="104" y2="384" stroke="#ffd700" stroke-width="2"/>
+                <line x1="96" y1="384" x2="104" y2="376" stroke="#ffd700" stroke-width="2"/>
 
-                <!-- Oblique rays from source through different lens zones -->
-                <line x1="100" y1="280" x2="244" y2="300" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
-                <line x1="100" y1="280" x2="246" y2="315" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
-                <line x1="100" y1="280" x2="248" y2="340" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+                <!-- Marginal ray (focuses closer) -->
+                <line x1="100" y1="380" x2="244" y2="325" stroke="#e74c3c" stroke-width="1.5"/>
+                <line x1="256" y1="325" x2="420" y2="380" stroke="#e74c3c" stroke-width="1.5"/>
+                <circle cx="420" cy="380" r="3" fill="#e74c3c"/>
 
-                <!-- Rays converge at DIFFERENT heights (coma) -->
-                <line x1="256" y1="300" x2="440" y2="305" stroke="#e74c3c" stroke-width="1.5"/>
-                <line x1="254" y1="315" x2="450" y2="315" stroke="#e74c3c" stroke-width="1.5"/>
-                <line x1="252" y1="340" x2="460" y2="330" stroke="#e74c3c" stroke-width="1.5"/>
+                <!-- Paraxial ray (focuses farther) -->
+                <line x1="100" y1="380" x2="247" y2="365" stroke="#3b9fe7" stroke-width="1.5"/>
+                <line x1="253" y1="365" x2="480" y2="380" stroke="#3b9fe7" stroke-width="1.5"/>
+                <circle cx="480" cy="380" r="3" fill="#3b9fe7"/>
 
-                <!-- Comet-shaped blur -->
-                <ellipse cx="445" cy="305" rx="8" ry="3" fill="#e74c3c" opacity="0.3"/>
-                <ellipse cx="450" cy="315" rx="12" ry="5" fill="#e74c3c" opacity="0.4"/>
-                <ellipse cx="458" cy="328" rx="10" ry="4" fill="#e74c3c" opacity="0.3"/>
+                <!-- Symmetric blur -->
+                <circle cx="450" cy="380" r="12" fill="#888" opacity="0.2"/>
 
-                <!-- Comet tail indicator -->
-                <path d="M 435 305 Q 448 315 455 328" stroke="#e74c3c" stroke-width="2" fill="none" opacity="0.6"/>
+                <!-- Labels positioned clear of diagram -->
+                <text x="100" y="360" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#888">On-axis</text>
+                <text x="100" y="370" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#888">point</text>
 
-                <!-- Labels positioned to avoid overlap -->
-                <text x="100" y="265" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#888">Off-axis point</text>
-                <text x="515" y="310" font-family="Work Sans" font-size="11" fill="#e74c3c" font-weight="600">Comet-shaped</text>
-                <text x="515" y="322" font-family="Work Sans" font-size="11" fill="#e74c3c" font-weight="600">blur</text>
+                <text x="320" y="310" font-family="Work Sans" font-size="9" fill="#e74c3c">Marginal</text>
+                <text x="380" y="360" font-family="Work Sans" font-size="9" fill="#3b9fe7">Paraxial</text>
 
-                <!-- Arrow showing off-axis angle -->
-                <line x1="250" y1="330" x2="100" y2="280" stroke="#888" stroke-width="0.5" stroke-dasharray="2,2"/>
-                <text x="160" y="295" font-family="Work Sans" font-size="10" fill="#888">Oblique angle</text>
+                <text x="505" y="385" font-family="Work Sans" font-size="10" fill="#666">Symmetric circular blur</text>
+                <text x="505" y="397" font-family="Work Sans" font-size="9" fill="#666">(axial difference, not lateral)</text>
 
                 <!-- Explanation box at bottom -->
-                <rect x="50" y="420" width="550" height="80" fill="#fff9e6" stroke="#ffd700" stroke-width="1" rx="4"/>
-                <text x="325" y="440" text-anchor="middle" font-family="Work Sans" font-size="12" font-weight="600" fill="#1a1a1a">Why Coma Occurs</text>
-                <text x="325" y="460" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#444">Oblique rays passing through different lens zones focus at different</text>
-                <text x="325" y="475" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#444">lateral positions, creating progressive displacement and asymmetric blur</text>
-                <text x="325" y="490" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#444">that resembles a comet with tail pointing away from the optical axis</text>
+                <rect x="50" y="480" width="550" height="100" fill="#fff9e6" stroke="#ffd700" stroke-width="1" rx="4"/>
+                <text x="325" y="502" text-anchor="middle" font-family="Work Sans" font-size="12" font-weight="600" fill="#1a1a1a">Key Difference</text>
+                <text x="325" y="522" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#444">COMA: Varying lateral magnification → Different LATERAL positions → Asymmetric blur</text>
+                <text x="325" y="542" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#444">SPHERICAL: Marginal vs paraxial → Different AXIAL positions → Symmetric blur</text>
+                <text x="325" y="562" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#666" font-style="italic">Coma requires off-axis viewing; spherical aberration occurs even on-axis</text>
             </svg>
         </div>
 
-        <div class="section-title">Understanding Coma</div>
-        <p>Coma is a monochromatic (non-color-related) aberration that specifically affects light rays entering a lens at an angle to the optical axis. The name comes from the characteristic "comet" shape of the blur pattern produced.</p>
+        <div class="section-title">Understanding the Mechanism</div>
+        <p>Coma arises from a fundamental property of oblique ray bundles: when light from an off-axis point enters a lens at an angle, different zones of the lens produce different lateral magnifications. This is not about different focal distances along the optical axis (which would be spherical aberration), but rather different lateral positions in the image plane.</p>
 
-        <div class="characteristic-list">
-            <ul>
-                <li><strong>Off-axis aberration:</strong> Only occurs when viewing through peripheral lens areas, not through the optical center</li>
-                <li><strong>Asymmetric blur:</strong> Unlike spherical aberration (circular blur), coma produces directional distortion</li>
-                <li><strong>Zone-dependent:</strong> Rays through upper lens zones focus at different heights than lower zone rays</li>
-                <li><strong>Increases with obliquity:</strong> Worsens as viewing angle increases from optical axis</li>
-            </ul>
+        <div class="mechanism-box">
+            <div style="font-weight: 600; margin-bottom: 8px;">Why Magnification Varies with Zone Height</div>
+            <p style="margin-bottom: 8px;">For obliquely incident rays, the geometrical conditions are asymmetric across the lens aperture. A ray passing through the upper portion of the lens encounters different effective angles and optical path lengths compared to a ray through the lower portion, even though both originate from the same object point.</p>
+            <p style="margin-bottom: 0;">The result: rays through peripheral zones undergo greater lateral displacement than rays through central zones. Since displacement increases progressively from center to edge, the image of a point becomes smeared in one direction, creating the characteristic asymmetric blur pattern.</p>
         </div>
 
+        <div class="section-title">Clinical Implications</div>
+        <p>Understanding that coma results from magnification variation explains several clinical observations:</p>
+
         <div class="comparison-box">
-            <div class="comparison-title">Clinical Significance</div>
-            <p>In spectacle lenses, coma becomes noticeable when patients look through peripheral areas of the lens rather than the optical center. This explains why:</p>
-            <p><strong>1.</strong> Proper optical center alignment is crucial for spectacle comfort</p>
-            <p><strong>2.</strong> Patients should be instructed to move their head rather than just their eyes when possible</p>
-            <p><strong>3.</strong> High-power lenses require more careful fitting and centration</p>
-            <p><strong>4.</strong> Modern lens designs optimize base curves to minimize peripheral aberrations including coma</p>
+            <p><strong>1. Aperture Dependence:</strong> Larger apertures mean rays pass through zones with greater variation in magnification, worsening coma. Stopping down reduces the effective aperture, limiting rays to zones with more similar magnification.</p>
+            <p><strong>2. Base Curve Design:</strong> Spectacle lens manufacturers optimize base curves to minimize magnification variation across the lens, reducing coma for peripheral viewing.</p>
+            <p><strong>3. Patient Instructions:</strong> Patients should be taught to view through the optical center where oblique incidence is minimized, reducing the magnification variation that causes coma.</p>
+            <p><strong>4. Power Relationship:</strong> Higher power lenses create greater magnification differences between zones, explaining why coma is more problematic in high prescriptions.</p>
         </div>
 
         <div class="final-answer">
-            Answer: <span style="color: #3b9fe7;">Coma</span>
+            Answer: Oblique rays through different lens zones experience varying magnification leading to differential lateral image displacement
         </div>
 
         <div class="distractor-section">
             <div class="section-title">Why Other Answers Are Incorrect</div>
 
             <div class="distractor-item">
-                <div class="distractor-label">✗ Spherical aberration</div>
-                <p>Spherical aberration affects on-axis rays and produces symmetric, circular blur patterns. It occurs because marginal rays (through lens periphery) and paraxial rays (near optical center) focus at different distances along the optical axis. This creates blur even when viewing through the lens center, unlike the patient's symptoms which occur only in peripheral vision. The blur from spherical aberration is radially symmetric with no directional component or comet shape.</p>
+                <div class="distractor-label">✗ "Marginal and paraxial rays focus at different axial distances creating depth-dependent blur"</div>
+                <p>This describes spherical aberration, not coma. In spherical aberration, the issue is longitudinal (axial) - rays focus at different distances along the optical axis. This creates symmetric, circular blur because the problem is rotationally symmetric around the axis. Spherical aberration occurs even for on-axis viewing. The question specifies asymmetric blur with directional smearing, which indicates lateral (not axial) displacement and requires off-axis conditions.</p>
             </div>
 
             <div class="distractor-item">
-                <div class="distractor-label">✗ Chromatic aberration</div>
-                <p>Chromatic aberration results from wavelength-dependent refraction, causing different colors to focus at different points. This produces colored fringes around objects (typically red-blue or yellow-purple halos) rather than monochromatic comet-shaped streaks. The patient describes shape distortion without mentioning color separation, ruling out chromatic aberration as the primary cause.</p>
+                <div class="distractor-label">✗ "Different wavelengths refract at different angles producing wavelength-dependent image positions"</div>
+                <p>This describes chromatic aberration, which results from dispersion - the wavelength-dependent refractive index of optical materials. Chromatic aberration produces colored fringes (typically red-blue separation) rather than the monochromatic directional smearing characteristic of coma. Both longitudinal chromatic aberration (different focal distances for different wavelengths) and lateral chromatic aberration (different magnifications for different wavelengths) involve color separation, which is not mentioned in the question.</p>
             </div>
 
             <div class="distractor-item">
-                <div class="distractor-label">✗ Astigmatism</div>
-                <p>Astigmatism produces elliptical or linear blur patterns due to different refractive powers in different meridians. While astigmatic blur is directional, it creates consistent elongation in a specific axis (horizontal, vertical, or oblique) rather than the progressive, smeared comet shape characteristic of coma. Astigmatic blur also affects both central and peripheral vision uniformly if uncorrected, whereas coma specifically manifests in off-axis viewing.</p>
+                <div class="distractor-label">✗ "The lens surfaces have different radii of curvature in orthogonal meridians"</div>
+                <p>This describes astigmatism, where the lens has different powers in different meridians (typically along vertical and horizontal axes). Astigmatism creates two line foci at different distances, producing elliptical blur that can be oriented in various directions. However, astigmatic blur is determined by the meridional structure of the lens itself and affects both central and peripheral vision consistently. It does not produce the progressive, zone-dependent lateral displacement that characterizes coma. The blur pattern in astigmatism depends on which focal line the image plane intersects, not on varying magnification across lens zones.</p>
             </div>
         </div>
 
         <div style="margin-top: 24px; padding: 16px; background: #f8fafc; border-radius: 4px;">
             <div class="section-title">Summary</div>
-            <p>The combination of asymmetric blur, comet-shaped appearance, peripheral location, and point source distortion definitively indicates coma. The off-axis nature of the symptoms (only in peripheral visual field) is the key diagnostic feature that distinguishes coma from other aberrations.</p>
+            <p>Coma is fundamentally a lateral magnification problem, not an axial focusing problem. The varying magnification across different lens zones for obliquely incident rays causes different amounts of lateral displacement, creating progressive smearing. This distinguishes it from spherical aberration (axial displacement, symmetric), chromatic aberration (wavelength-dependent, colored), and astigmatism (meridional power differences, elliptical blur).</p>
         </div>
     </div>
 </body>
